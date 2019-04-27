@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4866797310624486620}
   - component: {fileID: 4866797310624486623}
+  - component: {fileID: 789520881}
+  - component: {fileID: 789520882}
   m_Layer: 0
   m_Name: VoxelSpawn
   m_TagString: Untagged
@@ -44,9 +46,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voxelColorType:
-  - {fileID: 5055663190219820233, guid: 2b170f83c90559c40b5ed4cfd4d198ee, type: 3}
-  - {fileID: 5055663190219820233, guid: d64b8235e389f66419dd7d74f5c01554, type: 3}
-  amp: 25
-  freq: 40
-  cols: 150
-  rows: 250
+  - {fileID: 7856833930994143366, guid: 2c5d78237c56a8248bf8c76e23e44f71, type: 3}
+  - {fileID: 3797872067329723403, guid: eb72201558161eb44bb5a7cf5cc4e752, type: 3}
+  - {fileID: 8282595337820170977, guid: bde86fabb89150940a02330011cac226, type: 3}
+  amp: 41.3
+  freq: 48.2
+  cols: 200
+  rows: 200
+  thresh: 19
+  floored: 0
+--- !u!23 &789520881
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4866797310624486622}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &789520882
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4866797310624486622}
+  m_Mesh: {fileID: 0}

@@ -32,11 +32,11 @@ public class VoxelScript : MonoBehaviour
     /// <summary>
     /// Cols is the Columns and how many voxels are present HEIGHT
     /// </summary>
-    [Range(50, 1000)] public int cols = 100;
+    [Range(50, 300)] public int cols = 50;
     /// <summary>
     /// Rows is the rows of voxels WIDTH
     /// </summary>
-    [Range(50, 1000)] public int rows = 100;
+    [Range(50, 300)] public int rows = 50;
     /// <summary>
     /// Is the Position of the voxel spawner and each voxel
     /// </summary>
@@ -49,6 +49,10 @@ public class VoxelScript : MonoBehaviour
     /// Mesh on render
     /// </summary>
     MeshFilter mesh;
+    /// <summary>
+    /// checks to see if you want the object floored or not
+    /// </summary>
+    [Range(0f,1f)]public float floored = 1f;
 
     /// <summary>
     ///  When Project starts generates the terrian
@@ -66,7 +70,8 @@ public class VoxelScript : MonoBehaviour
     {
        Pos = this.transform.position;
         thresh = Perlin.Noise(1, 2, 50);
-        for (int x = 0; x < cols; x++)
+            
+            for (int x = 0; x < cols; x++)
         {
 
 
@@ -78,20 +83,21 @@ public class VoxelScript : MonoBehaviour
                 Vector3 noiseCoords = worldPosition / thresh;
                 float density = Perlin.Noise(noiseCoords);
                 density -= worldPosition.y * thresh;
-               
-                y = Mathf.Floor(y);
-               
+                if (floored == 1)
+                {
+                    y = Mathf.Floor(y);
+                }
                 if (density > (freq / amp) * thresh) continue;
                 ///This was for fun wanted to see what happens if i made comparative statements with a perlin noise added in
                 if (y > x && y >= z)
                 {
 
-                 
-                    y = Perlin.Noise((Pos.x + x) / freq, (Pos.y + y), (Pos.z + z)) / freq;
+                    currentVoxelType = voxelColorType[0];
+                    y = Perlin.Noise((Pos.x + x) * freq, (Pos.y + y), (Pos.z + z)) * freq;
                 }
                 if (y > amp / 2)
                     {
-                    y = Perlin.Noise((Pos.x + x) / freq, (Pos.y + y), (Pos.z + z)) / freq;
+                    y = Perlin.Noise((Pos.x + worldPosition.x) / freq, (Pos.y + worldPosition.y) /freq, (Pos.z + worldPosition.z)) / freq;
                     currentVoxelType = voxelColorType[0];
 
                     }
@@ -100,7 +106,7 @@ public class VoxelScript : MonoBehaviour
                         currentVoxelType = voxelColorType[1];
                         if (y < amp / freq)
                         {
-                        y = Perlin.Noise((Pos.x + x), (Pos.y + y), (Pos.z + z));
+                        y = Perlin.Noise((Pos.x + worldPosition.x), (Pos.y + worldPosition.y), (Pos.z + worldPosition.z));
                         currentVoxelType = voxelColorType[2];
                         }
                     }
