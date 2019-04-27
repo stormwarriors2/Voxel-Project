@@ -278,6 +278,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 12
   acceleration: 10
+--- !u!1 &789520879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4866797310624486622, guid: 408e1d00f9fcb8649847e853b31126ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 4866797309758673114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &789520881
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789520879}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &789520882
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789520879}
+  m_Mesh: {fileID: 0}
 --- !u!1001 &4866797309758673114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -354,32 +405,44 @@ PrefabInstance:
         type: 3}
       propertyPath: voxelColorType.Array.data[2]
       value: 
-      objectReference: {fileID: 5055663190219820233, guid: 7e0601dd7f1d2d949951c1956340954f,
+      objectReference: {fileID: 8282595337820170977, guid: bde86fabb89150940a02330011cac226,
         type: 3}
     - target: {fileID: 4866797310624486623, guid: 408e1d00f9fcb8649847e853b31126ce,
         type: 3}
       propertyPath: freq
-      value: 24.2
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 4866797310624486623, guid: 408e1d00f9fcb8649847e853b31126ce,
         type: 3}
       propertyPath: amp
-      value: 13.4
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4866797310624486623, guid: 408e1d00f9fcb8649847e853b31126ce,
         type: 3}
       propertyPath: rows
-      value: 398
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4866797310624486623, guid: 408e1d00f9fcb8649847e853b31126ce,
         type: 3}
       propertyPath: cols
-      value: 413
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4866797310624486623, guid: 408e1d00f9fcb8649847e853b31126ce,
         type: 3}
       propertyPath: thresh
-      value: 6.9
+      value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 4866797310624486623, guid: 408e1d00f9fcb8649847e853b31126ce,
+        type: 3}
+      propertyPath: voxelColorType.Array.data[0]
+      value: 
+      objectReference: {fileID: 7856833930994143366, guid: 2c5d78237c56a8248bf8c76e23e44f71,
+        type: 3}
+    - target: {fileID: 4866797310624486623, guid: 408e1d00f9fcb8649847e853b31126ce,
+        type: 3}
+      propertyPath: voxelColorType.Array.data[1]
+      value: 
+      objectReference: {fileID: 3797872067329723403, guid: eb72201558161eb44bb5a7cf5cc4e752,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 408e1d00f9fcb8649847e853b31126ce, type: 3}
